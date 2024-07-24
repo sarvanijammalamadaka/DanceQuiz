@@ -1,1 +1,86 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Languages Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(180deg, rgb(255, 103, 31) 10%, rgb(255, 255, 255) 50%, rgb(4,106, 56) 100%);
+    background-repeat: repeat, repeat;
+    background-position: center center, center 50%;
+    background-size: cover, 20px 20px
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 120px;
+	margin-bottom:100px;
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Adjust size to fit the container */
+	
+}
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #007bff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="home">
+            <h1>Welcome to the Indian Languages Quiz</h1>
+			<img src="data:image/png;base64,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">
+			</br>
+            <button onclick="startQuiz()">Start Quiz</button>
+<h3>Usefull links </h3>
+<h4><a target="_blank" href="https://rajbhasha.gov.in/en">Department of official language</a></h4>
+<h4><a target="_blank" href="https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/languagebr.pdf">Indian Languages</a></h4>
+<h4><a target="_blank" href="https://nptel.ac.in/">NPTEL</a></h4>
+        </div>
+        <div id="quiz" style="display: none;">
+            <div id="question"></div>
+            <button class="option" onclick="handleAnswer('a')"><span id="a_text"></span></button>
+            <button class="option" onclick="handleAnswer('b')"><span id="b_text"></span></button>
+            <button class="option" onclick="handleAnswer('c')"><span id="c_text"></span></button>
+            <button class="option" onclick="handleAnswer('d')"><span id="d_text"></span></button>
+        </div>
+    </div>
+    <script src="C:\Users\wipro\Desktop\Notepad++\Qjs.js"></script>
+</body>
+</html>
