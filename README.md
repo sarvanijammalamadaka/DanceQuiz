@@ -16,3 +16,5 @@
 -Open the quiz in your browser.
 -Answer questions by selecting the correct option.
 -View your score at the end of the quiz.
+
+Live Demo URL https://sarvanijammalamadaka.github.io/IndianLanguageQuiz/
